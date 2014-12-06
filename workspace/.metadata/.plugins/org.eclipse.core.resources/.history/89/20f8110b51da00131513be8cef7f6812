@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tractores</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="firstName">Primer Nombre</string>
+    <string name="manLabel">Hombre</string>
+    <string name="womanLabel">Mujer</string>
+    <string name="send">Enviar</string>
+
+</resources>

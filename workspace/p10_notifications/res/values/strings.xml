@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">p10_notifications</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_hint">Escribe el título</string>
+    <string name="content_hint">Escribe el contenido</string>
+    <string name="notify">Notificar</string>
+    <string name="notify_stack">Hacer Stack</string>
+    <string name="notify_progress">Hacer Progreso</string>
+    <string name="clear_notifications">Limpiar notificaciones</string>
+    <string name="title_activity_results">ResultsActivity</string>
+
+</resources>

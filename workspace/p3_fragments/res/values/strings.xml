@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">p3_fragments</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="company_hint">Nombre de la compañía</string>
+    <string name="no_info">No hay información</string>
+    <string name="red">Rojo</string>
+    <string name="green">Verde</string>
+    <string name="blue">Azul</string>
+    <string name="send">Enviar</string>
+
+</resources>

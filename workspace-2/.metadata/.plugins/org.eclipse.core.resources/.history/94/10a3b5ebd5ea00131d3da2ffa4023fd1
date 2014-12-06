@@ -1,0 +1,135 @@
+package com.example.p13_xml_json_parsers;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import android.content.Context;
+
+public class XMLParser {
+
+	private XmlPullParserFactory xmlFactory;
+	
+	private String country = "country";
+	private String temperature = "temperature";
+	private String humidity = "humidity";
+	private String pressure = "pressure";
+	
+	private String urlString = null;
+	private ParserInterface activityInterface = null;  
+
+	public XMLParser(Context activity, String urlString) {
+		super();
+		this.activityInterface = (ParserInterface) activity;
+		this.urlString = urlString;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getTemperature() {
+		return temperature;
+	}
+
+	public void setTemperature(String temperature) {
+		this.temperature = temperature;
+	}
+
+	public String getHumidity() {
+		return humidity;
+	}
+
+	public void setHumidity(String humidity) {
+		this.humidity = humidity;
+	}
+
+	public String getPressure() {
+		return pressure;
+	}
+
+	public void setPressure(String pressure) {
+		this.pressure = pressure;
+	}
+	
+	private void doTheParse(XmlPullParser parser){
+		int event;
+		String text = null;
+		try {
+			event = parser.getEventType();
+			while(event != XmlPullParser.END_DOCUMENT){
+				String name = parser.getName();
+				switch (event) {
+				case XmlPullParser.TEXT:
+					text = parser.getText();
+					break;
+				case XmlPullParser.END_TAG:
+					switch (name) {
+					case "country":
+						country = text;
+						break;
+					case "humidity":
+						humidity = parser.getAttributeValue(null, "value");
+						break;
+					case "temperature":
+						temperature = parser.getAttributeValue(null, "value");
+						break;
+					case "pressure":
+						pressure = parser.getAttributeValue(null, "value");
+						break;
+					}
+					break;
+				}
+				event = parser.next();
+			}
+		} catch (XmlPullParserException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			activityInterface.finished(false);
+		}
+	}
+	
+	public void fetchXML(){
+		Thread thread = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				try {
+					URL url = new URL(urlString);
+					HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+					conn.setConnectTimeout(15*1000);
+					conn.setDoInput(true);
+					conn.setReadTimeout(15*1000);
+					conn.setRequestMethod("GET");
+					conn.connect();
+					
+					InputStream streamIn = conn.getInputStream();
+					xmlFactory = XmlPullParserFactory.newInstance();
+					
+					XmlPullParser myParser = xmlFactory.newPullParser();
+					myParser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
+					myParser.setInput(streamIn,"UTF-8");
+					doTheParse(myParser);
+					streamIn.close();
+					
+					activityInterface.finished(true);
+					
+				} catch (IOException | XmlPullParserException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					activityInterface.finished(false);
+				}
+			}
+		});
+		thread.start();
+	}
+}

@@ -1,0 +1,22 @@
+INDEX VERSION 1.126+/home/julian/Dropbox/Cursos/Dictados/Android-Cymetria/workspace-2/.metadata/.plugins/org.eclipse.jdt.core
+3970458458.index
+1270315800.index
+3207905783.index
+2346038960.index
+1415693123.index
+1862499074.index
+2629224384.index
+3027894718.index
+2426109125.index
+3335047461.index
+2410658430.index
+2263238952.index
+4252358981.index
+2110370755.index
+411229323.index
+111785210.index
+3129996946.index
+1955337923.index
+4058085822.index
+3088020849.index
+3941678822.index

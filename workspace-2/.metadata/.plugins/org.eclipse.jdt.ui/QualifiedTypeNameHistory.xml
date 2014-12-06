@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.widget.ListView"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+<fullyQualifiedTypeName name="com.example.p11_content_provider.R.layout"/>
+<fullyQualifiedTypeName name="com.example.p11_content_provider.R.id"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="android.provider.UserDictionary"/>
+<fullyQualifiedTypeName name="android.provider.UserDictionary.Words"/>
+<fullyQualifiedTypeName name="com.example.p11_content_provider.MyCustomAdapter"/>
+<fullyQualifiedTypeName name="com.example.p11_content_provider.R.string"/>
+<fullyQualifiedTypeName name="com.example.p11_content_provider.MyWord"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="org.xmlpull.v1.XmlPullParserFactory"/>
+<fullyQualifiedTypeName name="org.xmlpull.v1.XmlPullParser"/>
+<fullyQualifiedTypeName name="com.example.p13_xml_json_parsers.MainActivity.ParsingMethod"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="com.example.p13_xml_json_parsers.ParserInterface"/>
+<fullyQualifiedTypeName name="com.example.p13_xml_json_parsers.R.id"/>
+<fullyQualifiedTypeName name="com.example.p13_xml_json_parsers.XMLParser"/>
+<fullyQualifiedTypeName name="android.os.AsyncTask"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="android.util.JsonReader"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="com.example.p13_xml_json_parsers.JSONParser"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+</qualifiedTypeNameHistroy>

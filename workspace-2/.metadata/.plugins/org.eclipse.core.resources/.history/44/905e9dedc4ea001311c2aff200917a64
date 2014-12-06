@@ -1,0 +1,17 @@
+package com.example.p13_xml_json_parsers;
+
+import org.xmlpull.v1.XmlPullParserFactory;
+
+public class XMLParser {
+
+	private XmlPullParserFactory xmlFactory;
+	private volatile boolean parsingComplete = true;
+	
+	private String country = "country";
+	private String temperature = "temperature";
+	private String humidity = "humidity";
+	private String pressure = "pressure";
+	
+	private String urlString = null;
+	
+}

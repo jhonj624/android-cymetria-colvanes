@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">p11_content_provider</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_hint">Escribe tu búsqueda</string>
+    <string name="search">Buscar</string>
+    <string name="no_results">No hay resultados</string>
+    <string name="searching">Buscando: </string>
+    <string name="no_search_input">El campo de búsqueda está vacío</string>
+    <string name="word_name">MiPalabra</string>
+    <string name="word_id">0</string>
+    <string name="word_locale">es_CO</string>
+    <string name="word_name_empty">No hay resultados</string>
+    <string name="word_id_empty">0</string>
+    <string name="word_locale_empty">No locale</string>
+
+</resources>

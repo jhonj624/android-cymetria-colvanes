@@ -1,0 +1,10 @@
+package com.example.p13_xml_json_parsers;
+
+import org.xmlpull.v1.XmlPullParserFactory;
+
+public class XMLParser {
+
+	private XmlPullParserFactory xmlFactory;
+	private volatile boolean parsingComplete = false;
+	
+}

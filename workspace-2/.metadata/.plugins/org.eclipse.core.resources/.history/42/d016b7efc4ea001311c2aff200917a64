@@ -1,0 +1,72 @@
+package com.example.p13_xml_json_parsers;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+public class XMLParser {
+
+	private XmlPullParserFactory xmlFactory;
+	private volatile boolean parsingComplete = true;
+	
+	private String country = "country";
+	private String temperature = "temperature";
+	private String humidity = "humidity";
+	private String pressure = "pressure";
+	
+	private String urlString = null;
+
+	public XMLParser(String urlString) {
+		super();
+		this.urlString = urlString;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getTemperature() {
+		return temperature;
+	}
+
+	public void setTemperature(String temperature) {
+		this.temperature = temperature;
+	}
+
+	public String getHumidity() {
+		return humidity;
+	}
+
+	public void setHumidity(String humidity) {
+		this.humidity = humidity;
+	}
+
+	public String getPressure() {
+		return pressure;
+	}
+
+	public void setPressure(String pressure) {
+		this.pressure = pressure;
+	}
+	
+	public void doTheParse(XmlPullParser parser){
+		int event;
+		String text = null;
+		
+		try {
+			event = parser.getEventType();
+			
+			while(event != XmlPullParser.END_DOCUMENT){
+				
+			}
+		} catch (XmlPullParserException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+}

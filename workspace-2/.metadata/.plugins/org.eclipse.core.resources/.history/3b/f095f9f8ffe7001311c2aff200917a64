@@ -1,0 +1,5 @@
+package com.example.p12_push_notifications;
+
+public class ConnectionDetector {
+
+}

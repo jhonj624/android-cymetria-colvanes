@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">May14</string>
+    <string name="hello_world">Hola Mundo!</string>
+    <string name="action_settings">Configuración</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_new">Nuevo</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_new">NewActivity</string>
+
+</resources>

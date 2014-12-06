@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">p6_files</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="new_file">Nuevo Archivo</string>
+    <string name="file_name_hint">Nombre del archivo</string>
+    <string name="file_content_hint">Coloca acá los contenidos de tu archivo</string>
+    <string name="empty_name_toast">Por favor ingresa un nombre de archivo</string>
+    <string name="error_writting">Ocurrió un error escribiendo el archivo</string>
+    <string name="no_mounted">No hay memoria externa, o no hay permisos</string>
+    <string name="written_internal">Archivo interno guardado exitosamente</string>
+    <string name="written_cache">Archivo caché guardado exitosamente</string>
+    <string name="written_external">Archivo externo guardado exitosamente</string>
+    <string name="written_external_private">Archivo externo(privado) guardado exitosamente</string>
+    <string name="new_directory">Nuevo dir:</string>
+    
+
+</resources>
