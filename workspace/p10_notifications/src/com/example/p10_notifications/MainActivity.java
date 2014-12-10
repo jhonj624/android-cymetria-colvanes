@@ -112,23 +112,27 @@ public class MainActivity extends ActionBarActivity {
 			notificationIds.add(Integer.valueOf(thisNotificationId));
 		}
 		
-		
+		//Pull info
 		EditText title = (EditText)findViewById(R.id.editTextTitle);
 		EditText content = (EditText)findViewById(R.id.editTextContent);
 		
 		String contentTitle = title.getText().toString();
 		String contentText = content.getText().toString();
 		
+		//The notification builder
 		final NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext());
 		
+		//Set builder properties
 		builder.setSmallIcon(R.drawable.ic_launcher);
 		builder.setContentTitle(contentTitle);
 		builder.setContentText(contentText);
 		builder.setTicker("Nueva notificación");
 		
+		//optional
 		builder.setAutoCancel(true);
 		builder.setLargeIcon(((BitmapDrawable)getResources().getDrawable(R.drawable.ic_launcher)).getBitmap());
 		
+		//Pending intent with taskstack
 		Intent resultIntent = new Intent(getApplicationContext(),ResultsActivity.class);
 
 		resultIntent.putExtra("id", thisNotificationId);
@@ -140,6 +144,7 @@ public class MainActivity extends ActionBarActivity {
 		stackBuilder.addParentStack(ResultsActivity.class);
 		stackBuilder.addNextIntent(resultIntent);
 		
+		//Pending intent without taskstack
 		PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
 		
 		builder.setContentIntent(resultPendingIntent);
@@ -153,10 +158,12 @@ public class MainActivity extends ActionBarActivity {
 		
 		PendingIntent resultPendingIntentAction = PendingIntent.getActivity(getApplicationContext(), 1, pendingIntentAction, PendingIntent.FLAG_UPDATE_CURRENT);
 		
+		//Actions in notifications
 		builder.addAction(R.drawable.ic_default, "Acción 1", resultPendingIntentAction);
 		builder.addAction(R.drawable.ic_default, "Acción 2", resultPendingIntentAction);
 		builder.addAction(R.drawable.ic_default, "Acción 3", resultPendingIntentAction);
 
+		// Set styles
 		contentInfo = thisNotificationId;
 		String contentInfoStr = String.valueOf(contentInfo);
 		if(stacking){
@@ -172,13 +179,12 @@ public class MainActivity extends ActionBarActivity {
 			
 			builder.setStyle(style);
 		}
-		
 		builder.setContentInfo(contentInfoStr);
 		
+		//Notification manager
 		final NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 		
-		
-		
+		//Progress
 		if(progress){
 			new Thread(new Runnable() {
 				
@@ -204,7 +210,7 @@ public class MainActivity extends ActionBarActivity {
 				}
 			}).start();
 		}else{
-
+			//Notify
 			Notification myNotification = builder.build();
 			manager.notify(thisNotificationId, myNotification);
 		}
@@ -213,7 +219,7 @@ public class MainActivity extends ActionBarActivity {
 	
 	public void clearNotifications(View view){
 		NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-		
+		//Clear notifications
 		manager.cancelAll();
 		stacked = 0;
 	}
