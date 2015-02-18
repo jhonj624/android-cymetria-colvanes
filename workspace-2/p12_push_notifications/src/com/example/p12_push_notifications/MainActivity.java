@@ -258,8 +258,8 @@ public class MainActivity extends ActionBarActivity {
 	        	try {
 	        	// Add your data
 		        	List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-		        	nameValuePairs.add(new BasicNameValuePair("name", "Julian"));
-		        	nameValuePairs.add(new BasicNameValuePair("email", "julianrfigueroa@gmail.com"));
+		        	nameValuePairs.add(new BasicNameValuePair("name", "YOUR_NAME"));
+		        	nameValuePairs.add(new BasicNameValuePair("email", "YOUR_EMAIL"));
 		        	nameValuePairs.add(new BasicNameValuePair("regId", regid));
 		        	httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
